@@ -1,0 +1,57 @@
+<div class="viewcontainer">
+
+<div id="header">
+    <h3>BINGO Leader Board</h3>
+</div>
+
+<section id="winnerlist">
+    <mat-grid-list cols="1" rows="this.getwinnerlistlength()" rowHeight="80px">
+
+        @for (user of winnerlist; track $index) {
+            <mat-grid-tile>
+                <div id="container">
+                    <div class="text"> 
+                    <img src={{this.getplayerimg($index)}} alt="player image">
+                    <p>{{this.getplayername($index)}} </p>
+                    <p class="hideyou" [ngClass]="{'you': isyou($index)}"> (you)</p>
+                    </div> 
+                    <div class="text">
+                    <p>{{this.getplayerpoints($index)}}</p>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        }
+        </mat-grid-list>
+</section>
+
+
+<!-- //play again needs to reset the lobby -->
+<div class="buttonoptions"> 
+    <button class="hideplayagain" routerLink="/splash">Play Again?</button>
+</div>
+
+
+<div class="bg">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+
+</div>
+</div>

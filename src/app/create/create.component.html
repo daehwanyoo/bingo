@@ -1,0 +1,51 @@
+<div id="container">
+  <section id="card">
+    <mat-card class="matregular" [ngClass]="{'matlead': isLeader()}"appearance="outlined">
+      <mat-card-header>
+        <h3>Ready, Set, Bingo!</h3>
+      </mat-card-header>
+      <mat-grid-list cols="1" rows="4" rowHeight="80px">
+        @for (user of playerlist; track $index) {
+         
+        <mat-grid-tile [ngClass]="{'ready': userready(user)}">
+          <div id="playercontainer">
+            <div class="text"> 
+                <img [src]="user.playerimg" alt="player image">
+                <p>{{user.displayName}}</p>
+                <p class="hideyou" [ngClass]="{'you': isyou(user)}">(you)</p>
+            </div>
+          </div>
+        </mat-grid-tile>
+      }
+      </mat-grid-list>
+
+      <mat-card-actions>
+        <mat-slide-toggle (change)="toggleFunConsequence($event)" *ngIf="isLeader()">Enable Fun Consequence</mat-slide-toggle>
+        <button class="matbtn2" (click)="readyup()">I'm Ready</button>
+        <button class="playbtn" [ngClass]="{'matbtn2': showplayset()}" *ngIf="isLeader()" (click)="clickplay()" >Play</button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
+  <div class="bg">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+  </div>
+</div>

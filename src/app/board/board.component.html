@@ -1,0 +1,93 @@
+<audio id="background-audio" autoplay>
+    <source src="/assets/cotton-toys-soundroll-main-version-16753-01-17.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+  
+<div class="viewcontainer">
+
+    <button id="sound-button" (click)="toggleSound()">
+        <img id="sound-icon" src="/assets/sound-on.png" alt="Sound On/Off">
+      </button>
+
+<div id="header">
+        <h3>Welcome to AAA Bingo</h3>
+        <img id="logo" src="/assets/AAA-logo.png">
+</div>
+    
+<div class="numdisplay">
+    <div class="display"  [ngClass]="{'redzone': getredzone()}">
+         <div id="num-head-grid">
+            <mat-grid-list cols="5" rowHeight="1:1">
+                @for (num of toplist; track $index) {
+                 <mat-grid-tile class="numhdtile">{{this.gettoptile($index).letter}} {{this.gettoptile($index).number}}</mat-grid-tile>
+                }
+    
+            </mat-grid-list>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="head">
+<div id="grid-head">
+    <mat-grid-list cols="5" rowHeight="2:1">
+       <mat-grid-tile class="hdtile">B</mat-grid-tile>
+       <mat-grid-tile class="hdtile">I</mat-grid-tile>
+       <mat-grid-tile class="hdtile">N</mat-grid-tile>
+       <mat-grid-tile class="hdtile">G</mat-grid-tile>
+       <mat-grid-tile class="hdtile">O</mat-grid-tile>
+    </mat-grid-list>
+    
+</div>
+</div>
+
+<div id="grids">
+<div class="grid1" [ngClass]="{'won': bingo()}">
+   
+    <mat-grid-list cols="5" rowHeight="1:1">
+        @for (num of numlist; track $index) {
+            <a href="" (click)="marktile($event, $index)" ><mat-grid-tile [ngClass]="{'freespace': isfreespace($index), 'marked': ismarked($index)}" class="brdtile">{{gettile($index).letter}} {{gettile($index).number}}</mat-grid-tile></a>
+        }    
+    </mat-grid-list>
+
+    <div class="btn-container">
+        <button class="bingo" [ngClass]="{'bingoshow': bingo()}" (click)="checkbingo()">CLAIM BINGO!</button>
+    </div>
+</div>
+</div>
+
+
+
+
+<div class="bghide" [ngClass]="{'bg': bingo()}">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+    <img class="imgs" src="/assets/AAA-logo.png">
+    <img class="imgs" src="/assets/towtruck.png">
+
+</div>
+
+<div class="freespaceopp">
+    <div [ngClass]="{'noneleft': bingo()}">
+        <button [ngClass]="{'noneleft': optionsleft()}" routerLink="/trivia">Free Space Opportunity</button>
+    </div>
+</div>
+
+</div>

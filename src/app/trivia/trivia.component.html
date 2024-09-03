@@ -1,0 +1,66 @@
+
+<div id="container">
+
+<section class="card">
+    <mat-card appearance="outlined">
+        <mat-card-header>
+            <h3>Question {{this.getquestionnumber()}} of 5</h3>
+        </mat-card-header>
+                <mat-card-actions class="normal" [ngClass]="{'correct': iscorrect()}" [ngClass]="{'correct': isincorrect()}">
+                    <p id="question">{{this.getquestion()}}</p>
+    
+                    @for (option of this.getoptionlist(); track $index) {
+                        <div class="options" [ngClass]="{'correct': iscorrect()}">
+                            <button [ngClass]="{'isclicked': isclicked($index)}" (click)="checkanswer($index)" class="letter">{{this.getletter($index)}}</button>
+                            <p>{{this.getoption($index)}}</p>
+                        </div>
+                    }  
+                    <button id="matbtn2" (click)="nextquestion()" routerLink="/board">Skip and Exit</button>
+                </mat-card-actions>
+
+            <mat-card-actions class="hide" [ngClass]="{'show': iscorrect()}">
+                <h3 id="correct">Correct!</h3>
+
+                <button id="clearbtn" class="hide" [ngClass]="{'clearshow': isclear()}" (click)="clearranboard()">
+                    CLEAR an Opponent's Board!
+                </button>
+
+                <button id="scramblebtn" class="hide2" [ngClass]="{'scrambleshow': isscramble()}" (click)="scrambleranboard()">
+                    SCRAMBLE an Opponent's Board!
+                </button>
+
+                <button id="matbtn2" (click)="nextquestion()" routerLink="/board">Return to Board</button>
+            </mat-card-actions>
+
+            <mat-card-actions class="hide" [ngClass]="{'show': isincorrect()}">
+                <h3 id="incorrect">Incorrect</h3>
+                <button id="matbtn2" (click)="nextquestion()" routerLink="/board">Return to Board</button>
+            </mat-card-actions>
+
+      </mat-card>
+    </section>
+
+    <div class="bg">
+        <img class="imgs" src="/assets/AAA-logo.png">
+        <img class="imgs" src="/assets/towtruck.png">
+        <img class="imgs" src="/assets/AAA-logo.png">
+        <img class="imgs" src="/assets/towtruck.png">
+        <img class="imgs" src="/assets/AAA-logo.png">
+        <img class="imgs" src="/assets/towtruck.png">
+        <img class="imgs" src="/assets/AAA-logo.png">
+        <img class="imgs" src="/assets/towtruck.png">
+        <img class="imgs" src="/assets/AAA-logo.png">
+        <img class="imgs" src="/assets/towtruck.png">
+        <img class="imgs" src="/assets/AAA-logo.png">
+        <img class="imgs" src="/assets/towtruck.png">
+        <img class="imgs" src="/assets/AAA-logo.png">
+        <img class="imgs" src="/assets/towtruck.png">
+        <img class="imgs" src="/assets/AAA-logo.png">
+        <img class="imgs" src="/assets/towtruck.png">
+        <img class="imgs" src="/assets/AAA-logo.png">
+        <img class="imgs" src="/assets/towtruck.png">
+        <img class="imgs" src="/assets/AAA-logo.png">
+        <img class="imgs" src="/assets/towtruck.png">
+    </div>
+
+</div>

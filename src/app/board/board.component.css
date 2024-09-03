@@ -1,0 +1,550 @@
+
+h3{
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+}
+
+#header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #195398;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#logo{
+    width: 80px;
+    margin-right: 20px;
+
+}
+
+.brdtile{
+    color:#195398;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;   
+    background-color:white;
+}
+
+#grids{
+    display: flex;
+    justify-content: center;
+    margin:0;
+    padding:0;
+}
+
+#head{
+    display: flex;
+    justify-content: center;
+}
+
+.hdtile{
+    font-size: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:#195398;
+}
+
+#grid-head{
+    width: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0;
+    border-radius: 25px;
+}
+
+.grid1{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    background-color: #195398;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.bingo{
+  background-color: #E51F33;
+  border-style: none;
+  color: white;
+  width: 50%;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 120%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.bingoshow{
+  background-color: #195398;
+  border-style: none;
+  color: white;
+  width: 50%;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 120%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  opacity: 100;
+}
+
+
+.btn-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.won{
+    background-color:#E51F33;
+}
+
+.freespace{
+    color:#e9e9e900; 
+    /* set to 0 opacity */
+    background-color: #d3e3f7;
+    background-image: url('/assets/AAA-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.marked{
+    color:#e9e9e900; 
+    background-color: #d3e3f7; ;
+    background-image: url('/assets/towtruck.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: center;
+    background-size: 60%;
+
+}
+
+
+
+.display{
+    width: 100%;
+    height: 80px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #d3e3f7;
+    color:#195398;
+    border:#195398;
+    border-width: 10px;
+    border-style: solid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.redzone{
+  border:#E51F33;
+  width: 100%;
+  margin: 50px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  color:#195398;
+  border-width: 10px;
+  border-style: solid;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 120%;
+  font-weight: bold;
+  border-radius: 25px;
+  background-color:#e39da4;
+}
+
+#num-head-grid{
+    width: 100%;
+}
+
+#displaybox{
+    display: flex;
+    justify-content: center;
+}
+
+
+.numdisplay{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+/* win animation */
+.viewcontainer{
+    width: 100%;
+}
+
+.bghide{
+    opacity: 0;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+
+}
+
+.bghide img{
+    position: absolute;
+    width: 400px;
+    z-index: -10;
+    top: 0;
+    transform: scale(25%);
+}
+
+    .bg {
+      width: 100%;
+      height: 160vh;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      position: absolute;
+      bottom: 0;
+      opacity: 100;
+      z-index: -10;
+    }
+  
+    .bg img {
+      position: absolute;
+      width: 400px;
+      z-index: -10;
+      top: 0;
+      transform: scale(25%);
+    }
+  
+    .bg img:nth-child(1) {
+        left: 5%; /* Adjust left position for the first image */
+        animation: float 12s ease-in reverse infinite;
+        animation-delay: -1s;
+    }
+
+    .bg img:nth-child(2) {
+        left: 15%; /* Adjust left position for the second image */
+        animation: float 15s ease-out infinite;
+        animation-delay: -5s;
+    }
+
+    .bg img:nth-child(3) {
+        left: 25%; /* Adjust left position for the third image */
+        animation: float 14s ease-in-out infinite;
+        animation-delay: -6s;
+    }
+
+    /* Adjust other images similarly */
+    .bg img:nth-child(4) {
+        left: 35%;
+        animation: float 15s ease-out reverse infinite;
+        animation-delay: -3s;
+    }
+
+    .bg img:nth-child(5) {
+        left: 45%;
+        animation: float 12s ease-in infinite;
+        animation-delay: -4s;
+    }
+
+    .bg img:nth-child(6) {
+        left: 55%;
+      animation: float 15s ease-out reverse infinite;
+      animation-delay: -6s;
+    }
+
+    .bg img:nth-child(7) {
+        left: 65%;
+        animation: float 14s ease-out infinite;
+        animation-delay: -2s;
+      }
+
+      .bg img:nth-child(8) {
+        left: 75%;
+        animation: float 15s ease-out reverse infinite;
+        animation-delay: -3s;
+      }
+
+      .bg img:nth-child(9) {
+        left: 85%;
+        animation: float 12s ease-out reverse infinite;
+        animation-delay: -5s;
+      }
+
+      .bg img:nth-child(10) {
+        left: 95%;
+        animation: float 15s ease-out reverse infinite;
+        animation-delay: -5s;
+      }
+
+      .bg img:nth-child(11) {
+        left: 0%;
+        animation: float 15s ease-out infinite;
+        animation-delay: -4s;
+      }
+
+      .bg img:nth-child(12) {
+        left: 100px;
+        animation: float 10s ease-out reverse infinite;
+        animation-delay: -4s;
+      }
+
+      .bg img:nth-child(13) {
+        left: 50%;
+        animation: float 12s ease-out reverse infinite;
+        animation-delay: -2s;
+      }
+
+      .bg img:nth-child(14) {
+        left: 5%;
+        animation: float 15s ease-out infinite;
+        animation-delay: -3s;
+      }
+
+      .bg img:nth-child(15) {
+        left: 15%;
+        animation: float 10s ease-out reverse infinite;
+        animation-delay: -5s;
+      }
+
+      .bg img:nth-child(16) {
+        left: 0%;
+        animation: float 15s ease-out infinite;
+        animation-delay: -2s;
+      }
+
+      .bg img:nth-child(17) {
+        left: 0%;
+        animation: float 10s ease-out reverse infinite;
+        animation-delay: -3s;
+      }
+
+      .bg img:nth-child(18) {
+        left: 45%;
+        animation: float 11s ease-out infinite;
+        animation-delay: -2s;
+      }
+
+      .bg img:nth-child(19) {
+        left: 0%;
+        animation: float 12s ease-out reverse infinite;
+        animation-delay: -2s;
+      }
+
+      .bg img:nth-child(20) {
+        left: 0%;
+        animation: float 12s ease-out infinite;
+        animation-delay: -2s;
+      }
+  
+    @keyframes float {
+      0% {
+        top: -20%;
+        transform: translateX(0%) scale(25%) rotate(0deg);
+      }
+      20% {
+        transform: translateX(15%) translateY(20%) scale(20%) rotate(45deg);
+      }
+      40% {
+        transform: translateX(25%) translateY(40%) scale(25%) rotate(90deg);
+      }
+      60% {
+        transform: translateX(65%) scale(30%) rotate(135deg);
+      }
+      80% {
+        transform: translateX(95%) scale(25%) rotate(180deg);
+      }
+      100% {
+        top: 120%;
+        transform: translateX(100%) scale(20%) rotate(225deg);
+      }
+    }
+
+    .playshow{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        opacity:100;
+    }
+
+    .playagain{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        opacity: 0;
+    }
+
+    .playshow button{
+        background-color: #195398; 
+        height: 50px;
+        width: 250px;
+        border-radius: 25px;
+        font-size: 120%;
+        color: white;
+        border-style: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    .freespaceopp{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 100;
+    }
+
+    .freespaceopp button{
+        background-color: #195398; 
+        height: 50px;
+        width: 100%;
+        border-radius: 10px;
+        font-size: 120%;
+        margin-bottom: 20px;
+        color: white;
+        border-style: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        transition: ease 200ms;
+    }
+
+    .freespaceopp button:hover{
+        background-color: #E51F33;
+    }
+   
+
+    .noneleft{
+        opacity: 0;
+        display: none;
+    }
+
+    /* play again button */
+
+    .hideplayagain{
+        opacity: 0;
+        display: none;
+    }
+
+    .showplayagain{
+        display: block;
+        opacity: 100;
+
+    }
+  
+    .cleared{
+      display: none;
+      opacity: 100;
+    }
+
+    .show{
+      display:block;
+      opacity: 100;
+    }
+
+    #sound-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      position: absolute; /* Position the button absolutely within the header */
+      right: 20px;  /* Adjust as necessary */
+      top: 20px;  /* Adjust as necessary */
+      z-index: 10;  /* Ensure it is above other elements */
+  }
+  
+  #sound-icon {
+      width: 30px;
+      height: 30px;
+  }
+   
+
+    @media (min-width: 700px){
+      .display{
+        width: 520px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        background-color: #d3e3f7;
+        color:#195398;
+        border:#195398;
+        border-width: 10px;
+        border-style: solid;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 120%;
+        font-weight: bold;
+        border-radius: 25px;
+    }
+    
+    .redzone{
+      border:#E51F33;
+      width: 520px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      color:#195398;
+      border-width: 10px;
+      border-style: solid;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 120%;
+      font-weight: bold;
+      border-radius: 25px;
+      background-color:#e39da4;
+    }
+
+
+    #grid-head{
+      width: 500px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 0;
+      border-radius: 25px;
+    }
+
+    .grid1{
+      margin-bottom: 30px;
+      width: 500px;
+      background-color: #195398;
+      padding: 20px;
+      border-radius: 25px;
+    }
+
+
+    #header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #195398;
+      margin: 40px;
+    }
+
+    #logo{
+      width: 100px;
+    }
+
+
+    .freespaceopp button{
+      background-color: #195398; 
+      height: 50px;
+      width: 250px;
+      border-radius: 10px;
+      font-size: 120%;
+      margin-bottom: 20px;
+      color: white;
+      border-style: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      transition: ease 200ms;
+  }
+
+  .btn-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+    
+    }
+
+
+  

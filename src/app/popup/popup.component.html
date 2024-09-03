@@ -1,0 +1,21 @@
+
+<div class="hide"  [ngClass]="{'show': isclear()}">
+    <h2 mat-dialog-title>Someone CLEARED your board!</h2>
+    <mat-dialog-content>Answer Free Space Opportunity questions for a chance to retaliate
+      <div>Closing in {{countdown}} seconds...</div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-button mat-dialog-close>Close</button>
+    </mat-dialog-actions>
+</div>
+
+<div class="hide"  [ngClass]="{'show': isscramble()}">
+
+<h2 mat-dialog-title>Someone SCRAMBLED your board!</h2>
+<mat-dialog-content>Answer Free Space Opportunity questions for a chance to retaliate
+  <div>Closing in {{countdown}} seconds...</div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
+</div>
